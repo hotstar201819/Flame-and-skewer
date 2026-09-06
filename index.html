@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flame & Skewer — Greek-American favorites, authentic gyros, steaks and Mo's famous Friday Night Prime Rib in Ames, Iowa.">
+  <title>Flame & Skewer | Greek-American Grill</title>
+  <style>
+    :root{
+      --charcoal:#171717; --cream:#fff8ed; --gold:#d99b36; --red:#9d2d24;
+      --muted:#6f675e; --white:#fff; --border:#eadfce;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:10;background:rgba(23,23,23,.96);color:white;border-bottom:1px solid #333}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:Georgia,serif;font-size:1.45rem;font-weight:700;letter-spacing:.3px}
+    .brand span{color:var(--gold)}
+    .links{display:flex;gap:26px;font-size:.92rem}
+    .links a:hover{color:var(--gold)}
+    .hero{min-height:650px;display:grid;place-items:center;text-align:center;color:white;
+      background:linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.62)),
+      radial-gradient(circle at 50% 20%,#8c5b31 0,#2a2119 45%,#101010 100%);}
+    .hero-inner{max-width:850px;padding:80px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:3px;color:#f0bd63;font-size:.78rem;font-weight:800}
+    h1{font-family:Georgia,serif;font-size:clamp(3.1rem,8vw,6.3rem);line-height:.95;margin:18px 0}
+    .hero p{font-size:1.18rem;max-width:720px;margin:0 auto 30px;color:#f5eee4}
+    .buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:800}
+    .primary{background:var(--gold);color:#171717}
+    .secondary{border:1px solid rgba(255,255,255,.45);color:white}
+    section{padding:85px 0}
+    .section-title{text-align:center;max-width:720px;margin:0 auto 45px}
+    .section-title h2{font-family:Georgia,serif;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;margin-bottom:12px}
+    .section-title p{color:var(--muted)}
+    .special{background:var(--charcoal);color:white}
+    .special-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .special h2{font-family:Georgia,serif;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1}
+    .special p{color:#ddd;margin:20px 0}
+    .special-card{border:1px solid #4a4238;border-radius:24px;padding:35px;background:linear-gradient(145deg,#26211c,#151515);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .special-card .price{font-family:Georgia,serif;font-size:2.5rem;color:#f0bd63;margin:10px 0 20px}
+    .pill{display:inline-block;border:1px solid #66553e;border-radius:999px;padding:6px 12px;font-size:.8rem;color:#f0bd63}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid var(--border);border-radius:20px;padding:30px;box-shadow:0 10px 30px rgba(60,40,20,.06)}
+    .icon{font-size:2rem;margin-bottom:15px}
+    .card h3{font-family:Georgia,serif;font-size:1.5rem;margin-bottom:8px}
+    .card p{color:var(--muted)}
+    .about{background:#f3eadc}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about h2{font-family:Georgia,serif;font-size:3rem;line-height:1.05;margin-bottom:18px}
+    .quote{font-family:Georgia,serif;font-size:1.5rem;line-height:1.35;border-left:4px solid var(--gold);padding-left:22px}
+    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
+    .info div{background:white;border:1px solid var(--border);padding:20px;border-radius:16px}
+    .info strong{display:block;margin-bottom:5px}
+    .info span{color:var(--muted);font-size:.93rem}
+    .cta{text-align:center;background:var(--red);color:white}
+    .cta h2{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,3.7rem)}
+    .cta p{max-width:650px;margin:15px auto 25px;color:#f9e8e5}
+    footer{background:#111;color:#aaa;padding:35px 0}
+    .footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer strong{color:white}
+    @media(max-width:800px){
+      .links{display:none}.special-grid,.about-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}.info{grid-template-columns:1fr}
+      section{padding:65px 0}.hero{min-height:600px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container navin">
+      <a class="brand" href="#top">FLAME <span>&</span> SKEWER</a>
+      <div class="links">
+        <a href="#special">Friday Special</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#story">Our Story</a>
+        <a href="#visit">Visit</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="eyebrow">Greek-American Grill • Ames, Iowa</div>
+        <h1>Good Food.<br>Real Favorites.</h1>
+        <p>Authentic gyros, Mediterranean flavors and American steakhouse classics — including the local favorite everyone talks about: Mo's Friday Night Prime Rib.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#special">Explore Friday Prime Rib</a>
+          <a class="btn secondary" href="#visit">Find Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="special" class="special">
+      <div class="container special-grid">
+        <div>
+          <span class="pill">FRIDAY NIGHT FAVORITE</span>
+          <h2 style="margin-top:18px">Mo's Famous<br>Prime Rib</h2>
+          <p>Every Friday, guests come back for a prime rib dinner known locally for being exceptionally tender, juicy and satisfying.</p>
+          <p>It's a signature that fits right at home alongside Flame & Skewer's steaks, ribeyes, gyros and Mediterranean favorites.</p>
+          <a class="btn primary" href="#visit">Plan Your Visit</a>
+        </div>
+        <div class="special-card">
+          <div class="eyebrow">The Friday tradition</div>
+          <div class="price">PRIME RIB</div>
+          <p>Ask about the Friday Night Special when you arrive. Availability and pricing may vary.</p>
+          <p style="color:#bbb">A local favorite with a following that extends beyond the dining room — including community catering events.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="favorites">
+      <div class="container">
+        <div class="section-title">
+          <h2>Something for everyone</h2>
+          <p>A relaxed neighborhood restaurant where Mediterranean classics meet American comfort food.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🥙</div>
+            <h3>Authentic Gyros</h3>
+            <p>One of the restaurant's best-known specialties, served with the flavors and comfort that keep local diners coming back.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🔥</div>
+            <h3>Steaks & Ribeyes</h3>
+            <p>American steakhouse favorites complement the Greek-American menu, from ribeyes to hearty dinner plates.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🍽️</div>
+            <h3>Family Favorites</h3>
+            <p>Burgers, sandwiches, seafood, soups, salads and more make Flame & Skewer an easy choice for groups and families.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow" style="color:var(--red)">Ames tradition</div>
+          <h2>A local favorite, built around good food.</h2>
+          <p>Flame & Skewer brings together Greek and Mediterranean inspiration with familiar American grill favorites. The result is a menu with plenty of variety — and a loyal local following.</p>
+          <div class="info">
+            <div><strong>4.5 ★</strong><span>Customer rating provided</span></div>
+            <div><strong>381+</strong><span>Reviews provided</span></div>
+            <div><strong>$10–20</strong><span>Typical price range provided</span></div>
+          </div>
+        </div>
+        <div class="quote">“Mo's Friday night prime rib dinner” has become one of the restaurant's most talked-about traditions among local diners.</div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="container">
+        <div class="section-title">
+          <h2>Come hungry. Leave happy.</h2>
+          <p>Stop in for a gyro, settle in for a steak, or make Friday night a prime rib night.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">📍</div>
+            <h3>New Location</h3>
+            <p><strong>823 Wheeler St #5</strong><br>Ames, Iowa</p>
+          </article>
+          <article class="card">
+            <div class="icon">⭐</div>
+            <h3>Local Favorite</h3>
+            <p>Known for Greek-American comfort food, authentic gyros and a popular Friday prime rib tradition.</p>
+          </article>
+          <article class="card">
+            <div class="icon">☎️</div>
+            <h3>Call Ahead</h3>
+            <p>For current hours, Friday special details and availability, contact the restaurant directly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Make Friday Prime Rib Night.</h2>
+        <p>Discover why this long-running Ames favorite has built such a loyal following.</p>
+        <a class="btn primary" href="#visit">Visit Flame & Skewer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerin">
+      <div><strong>FLAME & SKEWER</strong><br>Greek-American Grill</div>
+      <div>823 Wheeler St #5 • Ames, Iowa</div>
+      <div>© 2026 Flame & Skewer</div>
+    </div>
+  </footer>
+</body>
+</html>
